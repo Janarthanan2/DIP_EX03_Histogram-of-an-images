@@ -63,8 +63,9 @@ plt.show()
 ## Output:
 ### Input Grayscale Image and Color Image:
 
+<img src="https://github.com/Janarthanan2/DIP_EX03_Histogram-of-an-images/assets/119393515/8a938518-0869-46df-bcb9-9aa9d2a2e98a" width = 150 height =250>
+<img src="https://github.com/Janarthanan2/DIP_EX03_Histogram-of-an-images/assets/119393515/7b2db2a7-0c3c-43fd-bed3-37c9cdab2395" width = 35%>
 
-![Screenshot 2024-03-19 111043](https://github.com/Aravindsamy04/Histogram-of-an-images/assets/113497037/8e811fce-1049-433b-b438-19b8cb8be393)
 
 
 
