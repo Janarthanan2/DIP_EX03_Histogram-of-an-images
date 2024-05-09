@@ -23,12 +23,12 @@ The Histogram of gray scale image and color image is shown.
 
 
 ## Program:
-```python
+```
 # Developed By: JANARTHANAN V K
 # Register Number: 212222230051
+```
 ### Input Grayscale Image and Color Image
-```
-```
+```python
 import cv2
 import matplotlib.pyplot as plt
 gray_image = cv2.imread("gray.jpg")
@@ -41,7 +41,7 @@ cv2.destroyAllWindows()
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
-```
+```python
 import numpy as np
 import cv2
 Gray_image = cv2.imread("gray.jpg")
