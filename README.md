@@ -31,34 +31,52 @@ The Histogram of gray scale image and color image is shown.
 ```
 import cv2
 import matplotlib.pyplot as plt
-Gray_image = cv2.imread('tree.jpg')
-Color_image = cv2.imread('york.jpg')
-plt.imshow(Gray_image)
-plt.show()
-plt.imshow(Color_image)
-plt.show()
-
+gray_image = cv2.imread("gray.jpg")
+color_image = cv2.imread("color.jpg")
+cv2.imshow("Gray Image",gray_image)
+cv2.imshow("Color Image",color_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
 ```
-hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
-hist1 = cv2.calcHist([Color_image],[1],None,[256],[0,256])
+import numpy as np
+import cv2
+Gray_image = cv2.imread("gray.jpg")
+Color_image = cv2.imread("color.jpg")
+import matplotlib.pyplot as plt
+gray_hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
+color_hist = cv2.calcHist([Color_image],[0],None,[256],[0,256])
 plt.figure()
+plt.imshow(Gray_image)
+plt.show()
 plt.title("Histogram")
-plt.xlabel('grayscale value')
-plt.ylabel('pixel count')
-plt.stem(hist)
+plt.xlabel("Grayscale Value")
+plt.ylabel("Pixel Count")
+plt.stem(gray_hist)
 plt.show()
-plt.figure()
-plt.title("Histogram of Color Image Green Channel")
-plt.xlabel('Intensity value')
-plt.ylabel('pixel count')
-plt.stem(hist1)
+plt.imshow(Color_image)
 plt.show()
+plt.title("Histogram of Color Image - Green Channel")
+plt.xlabel("Intensity Value")
+plt.ylabel("Pixel Count")
+plt.stem(color_hist)
+plt.show()
+cv2.waitKey(0)
 ```
 
+## Histogram Equalization of Grayscale Image.
+```python
+import cv2
+gray_image = cv2.imread("gray.jpg",0)
+cv2.imshow('Grey Scale Image',gray_image)
+equ = cv2.equalizeHist(gray_image)
+cv2.imshow("Equalized Image",equ)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
 
 ## Output:
 ### Input Grayscale Image and Color Image:
